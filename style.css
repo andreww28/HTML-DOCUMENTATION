@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color:#42424a;
+}
+
+img{
+  width:100%;
+  display:block;
+  margin:2em 0;
+}
+
+/*Typography*/
+h1,header{
+  font-family: 'Ubuntu', sans-serif;
+  line-height:1;
+  color:#1b1b1c;
+}
+
+h1{
+  font-weight:700;
+  font-size: 2rem;
+  margin: 0.5em 0;
+  text-align:center;
+}
+
+p{
+  margin: 0.5em;
+}
+
+.note-text{
+  font-weight:500;
+  font-sizes: 1.4375;
+}
+
+header{
+  margin-bottom:1em;
+  font-size: 1.75rem;
+  font-weight:500;
+}
+
+.navlink-div ul{
+  list-style-type: none;
+}
+
+.nav-link{
+  padding-bottom:0.5em;
+  font-size:1.3rem;
+  text-decoration:none;
+  color: #2c2c85;
+  border-bottom: #303045 3px solid;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+  color:#6969c2;
+  transition: 1s ease; 
+}
+
+.nav-link:hover::before{
+  content:'< ';
+  transition: 1.5s ease-in;
+  color:red;
+}
+
+.nav-link:hover::after{
+  transition: 1.5s ease-in;
+  content:' />';
+  
+  color:red;
+}
+
+
+/*Layout*/
+
+.main-section, #reference{
+  padding:1em;
+}
+
+.main-section li, #reference li{
+  margin: 0 0 1em 2.5em;
+}
+
+.p-color-div{
+  margin:1.5em 0.5em;
+  padding:1em 0;
+  max-width:100%;
+  background-color:#e8e8eb;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.blue-p-div{
+  border-left: #243797 10px solid;
+}
+
+.red-p-div{
+  border-left: #8a3a04 10px solid;
+}
+
+.note-p-div{
+  background-color: #FFFDD1;
+  border-left: #A4E51A 10px solid;
+}
+
+#navbar{
+  margin:1em;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/*Nav Bar*/
+#navbar ul{
+  background-color:#dfe5ed;
+  width:100%;
+  max-width:25em;
+  height:15em;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  overflow-x: hidden;
+  overflow-y:auto;
+}
+
+.nav-link{
+  display:block;
+  margin:0.5em;
+}
+
+@media (min-width: 815px){
+  .container{
+    display:flex;
+  }
+  
+  #main-doc{
+    margin-left:20em;
+    padding:2em 1em;
+  }
+  
+  #navbar{
+    margin:0;
+    position:fixed;
+    width: 20em;
+    height:100%;
+  }
+  
+  #navbar ul{
+    height:100%;
+  }
+  
+  p, .main-section li{
+    max-width: 72ch;
+  }
+  
+  img{
+    width: 80%;
+  }
+}
